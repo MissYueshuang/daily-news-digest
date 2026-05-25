@@ -6,10 +6,12 @@ from bs4 import BeautifulSoup
 AI_FEEDS = [
     {"name": "TechCrunch AI", "url": "https://techcrunch.com/category/artificial-intelligence/feed/", "weight": 3},
     {"name": "VentureBeat AI", "url": "https://venturebeat.com/category/ai/feed/", "weight": 3},
-    {"name": "The Verge AI", "url": "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml", "weight": 2},
+    {"name": "The Verge AI", "url": "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml", "weight": 3},
     {"name": "MIT Tech Review", "url": "https://www.technologyreview.com/feed/", "weight": 3},
-    {"name": "Wired AI", "url": "https://www.wired.com/feed/tag/artificial-intelligence/latest/rss", "weight": 2},
-    {"name": "Ars Technica AI", "url": "https://feeds.arstechnica.com/arstechnica/technology-lab", "weight": 2},
+    {"name": "Ars Technica", "url": "https://feeds.arstechnica.com/arstechnica/technology-lab", "weight": 2},
+    {"name": "BBC Technology", "url": "http://feeds.bbci.co.uk/news/technology/rss.xml", "weight": 3},
+    {"name": "The Guardian AI", "url": "https://www.theguardian.com/technology/artificialintelligenceai/rss", "weight": 3},
+    {"name": "ZDNet AI", "url": "https://www.zdnet.com/topic/artificial-intelligence/rss.xml", "weight": 2},
     {"name": "AI News", "url": "https://www.artificialintelligence-news.com/feed/", "weight": 1},
 ]
 

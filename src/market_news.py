@@ -116,6 +116,6 @@ def fetch_market_news(max_items=5):
             seen[key] = a
 
     cutoff = datetime.now(timezone.utc) - timedelta(hours=24)
-    articles = [a for a in seen.values() if a["published"] and a["published"] >= cutoff]
+    articles = [a for a in seen.values() if not a["published"] or a["published"] >= cutoff]
     articles.sort(key=_relevance_score, reverse=True)
     return articles[:max_items]
