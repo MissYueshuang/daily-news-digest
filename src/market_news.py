@@ -4,7 +4,7 @@ from datetime import datetime, timezone, timedelta
 from bs4 import BeautifulSoup
 
 MARKET_FEEDS = [
-    {"name": "Reuters Business", "url": "https://feeds.reuters.com/reuters/businessNews", "weight": 3},
+    {"name": "AP Business", "url": "https://feeds.apnews.com/rss/apf-business", "weight": 3},
     {"name": "CNBC Markets", "url": "https://www.cnbc.com/id/100003114/device/rss/rss.html", "weight": 3},
     {"name": "CNBC Economy", "url": "https://www.cnbc.com/id/20910258/device/rss/rss.html", "weight": 3},
     {"name": "Federal Reserve", "url": "https://www.federalreserve.gov/feeds/press_all.xml", "weight": 4},

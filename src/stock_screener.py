@@ -12,7 +12,7 @@ WATCHLIST = [
     "NKE", "PM", "VZ", "NEE", "RTX", "HON", "LOW", "QCOM", "IBM",
     "INTC", "GE", "CAT", "UPS", "BA", "GS", "MS", "AMGN", "SBUX", "INTU",
     "PLD", "DE", "BLK", "SPGI", "NOW", "AXP", "SYK", "GILD", "MDLZ", "ADP",
-    "MMC", "CB", "REGN", "TJX", "C", "WM", "ZTS", "ISRG", "ICE", "PNC",
+    "CB", "REGN", "TJX", "C", "WM", "ZTS", "ISRG", "ICE", "PNC",
     "USB", "BSX", "ELV", "AON", "VRTX", "MO", "HCA", "CI", "APD", "SO",
     "DUK", "CL", "SHW", "ETN", "NSC", "PGR", "ITW", "MCO", "EMR", "ECL",
     "PANW", "SNOW", "UBER", "ABNB", "COIN", "PLTR",

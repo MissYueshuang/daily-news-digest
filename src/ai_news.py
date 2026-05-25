@@ -8,7 +8,8 @@ AI_FEEDS = [
     {"name": "VentureBeat AI", "url": "https://venturebeat.com/category/ai/feed/", "weight": 3},
     {"name": "The Verge AI", "url": "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml", "weight": 2},
     {"name": "MIT Tech Review", "url": "https://www.technologyreview.com/feed/", "weight": 3},
-    {"name": "Wired AI", "url": "https://www.wired.com/feed/category/artificial-intelligence/latest/rss", "weight": 2},
+    {"name": "Wired AI", "url": "https://www.wired.com/feed/tag/artificial-intelligence/latest/rss", "weight": 2},
+    {"name": "Ars Technica AI", "url": "https://feeds.arstechnica.com/arstechnica/technology-lab", "weight": 2},
     {"name": "AI News", "url": "https://www.artificialintelligence-news.com/feed/", "weight": 1},
 ]
 
