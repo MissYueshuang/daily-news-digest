@@ -9,7 +9,7 @@ MARKET_FEEDS = [
     {"name": "CNBC Economy", "url": "https://www.cnbc.com/id/20910258/device/rss/rss.html", "weight": 3},
     {"name": "Federal Reserve", "url": "https://www.federalreserve.gov/feeds/press_all.xml", "weight": 4},
     {"name": "Yahoo Finance", "url": "https://finance.yahoo.com/news/rssindex", "weight": 2},
-    {"name": "MarketWatch", "url": "https://feeds.content.dowjones.io/public/rss/mw_realtimeheadline", "weight": 2},
+    {"name": "MarketWatch", "url": "https://feeds.marketwatch.com/marketwatch/topstories/", "weight": 2},
 ]
 
 POLICY_KEYWORDS = [
