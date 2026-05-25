@@ -1,0 +1,37 @@
+name: Daily News Digest
+
+on:
+  schedule:
+    # 9 AM Eastern Time
+    # EDT (Mar–Nov):  9 AM EDT = 13:00 UTC
+    # EST (Nov–Mar): 9 AM EST = 14:00 UTC
+    # Running at 13:00 UTC covers EDT; shifts to 10 AM during EST winter months.
+    # To pin to 9 AM year-round, use a timezone-aware runner or adjust manually.
+    - cron: "0 13 * * *"
+  workflow_dispatch:   # Enable manual "Run workflow" button in GitHub Actions UI
+
+jobs:
+  send-digest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Send daily digest
+        env:
+          GMAIL_ADDRESS: ${{ secrets.GMAIL_ADDRESS }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          RECIPIENT_EMAIL: ${{ secrets.RECIPIENT_EMAIL }}
+          GH_REPO: ${{ github.repository }}
+        run: python main.py
