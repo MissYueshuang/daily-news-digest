@@ -2,12 +2,8 @@ name: Daily News Digest
 
 on:
   schedule:
-    # 9 AM Eastern Time
-    # EDT (Mar–Nov):  9 AM EDT = 13:00 UTC
-    # EST (Nov–Mar): 9 AM EST = 14:00 UTC
-    # Running at 13:00 UTC covers EDT; shifts to 10 AM during EST winter months.
-    # To pin to 9 AM year-round, use a timezone-aware runner or adjust manually.
-    - cron: "0 13 * * *"
+    # 9 AM Singapore Time (SGT = UTC+8, no daylight saving)
+    - cron: "0 1 * * *"
   workflow_dispatch:   # Enable manual "Run workflow" button in GitHub Actions UI
 
 jobs:

@@ -19,7 +19,7 @@ _BASE = """<!DOCTYPE html>
              style="background:#ffffff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.1);max-width:600px;width:100%;">
         {content}
         <tr><td style="background:#f8fafc;padding:16px;text-align:center;font-size:12px;color:#94a3b8;border-top:1px solid #e2e8f0;">
-          Automated digest · Sent daily at 9 AM ET · <a href="https://github.com/{gh_repo}" style="color:#94a3b8;">Source on GitHub</a>
+          Automated digest · Sent daily at 9 AM SGT · <a href="https://github.com/{gh_repo}" style="color:#94a3b8;">Source on GitHub</a>
         </td></tr>
       </table>
     </td></tr>
