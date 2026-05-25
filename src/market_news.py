@@ -1,6 +1,6 @@
 import requests
 import feedparser
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 from bs4 import BeautifulSoup
 
 MARKET_FEEDS = [
@@ -115,6 +115,7 @@ def fetch_market_news(max_items=5):
         if key not in seen or _relevance_score(a) > _relevance_score(seen[key]):
             seen[key] = a
 
-    articles = list(seen.values())
+    cutoff = datetime.now(timezone.utc) - timedelta(hours=24)
+    articles = [a for a in seen.values() if a["published"] and a["published"] >= cutoff]
     articles.sort(key=_relevance_score, reverse=True)
     return articles[:max_items]

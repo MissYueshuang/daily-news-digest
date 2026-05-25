@@ -1,6 +1,7 @@
 import yfinance as yf
 import pandas as pd
 import numpy as np
+from datetime import datetime, timezone, timedelta
 
 # Top 100 S&P 500 stocks by market cap — liquid, well-known names
 WATCHLIST = [
@@ -109,6 +110,13 @@ def get_stock_of_the_day():
         volume = volume_df[ticker].dropna()
 
         if len(close) < 210:
+            continue
+
+        # Skip if most recent data is stale (older than 3 days — handles weekends/holidays)
+        latest_date = close.index[-1]
+        if hasattr(latest_date, 'tzinfo') and latest_date.tzinfo is None:
+            latest_date = latest_date.tz_localize('UTC')
+        if (datetime.now(timezone.utc) - latest_date).days > 3:
             continue
 
         try:

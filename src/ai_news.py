@@ -116,6 +116,7 @@ def fetch_ai_news(max_items=5):
         if key not in seen or _score(a) > _score(seen[key]):
             seen[key] = a
 
-    articles = list(seen.values())
+    cutoff = datetime.now(timezone.utc) - timedelta(hours=24)
+    articles = [a for a in seen.values() if a["published"] and a["published"] >= cutoff]
     articles.sort(key=_score, reverse=True)
     return articles[:max_items]
